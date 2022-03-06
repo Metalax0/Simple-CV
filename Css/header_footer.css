@@ -1,0 +1,67 @@
+/*adds background image to body*/
+body
+{
+	background-image: url("../Image/background_1.png");
+	background-size: cover; /*Resizes image to fit into the container (body)*/
+	/*overflow: hidden;*/
+}
+
+/*adds padding and margin on nav tag*/
+nav
+{
+	/*border:1px solid black;*/
+	padding-left: 2%;
+	margin-top: 2%;
+}
+
+/*adds font property and removes default anchor tag text decoration of underline of  anchor tag */
+a
+{
+	font: bold 22px Courier New;
+	text-decoration: none;
+	color: black;
+}
+
+/*adds border to anchor tag when hovered by mouse*/
+a:hover
+{
+	border-bottom : 2px solid black;
+}
+
+/*this acts as a bookbark (shows current page)*/
+.a_selected
+{
+	border-bottom : 2px solid black;
+}
+
+/*adds padding to element with class of header_menu*/
+.header_menu
+{
+	padding-right: 40px;
+}
+
+/*changes size of image (logo in navbar)*/
+.logo
+{
+	height: 50px;
+	margin-top: -10%; /*to align navbar logo with menu items*/
+}
+
+/*aligns footer with the help of margin property*/
+footer
+{
+	margin-top: 1%;
+}
+
+/*reduces icon size of footer elements*/
+footer img
+{
+	width: 50%;
+}
+
+/*adds style to text under footer icons*/
+.footer_copyright
+{
+	text-align: center;
+	margin-left: -2.5%;
+}

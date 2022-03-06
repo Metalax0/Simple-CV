@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="blog page">
+  	<meta name="author" content="Sampanna Pokharel">
+  	<meta name="keywords" content="blog, website, article">
+
+	<title>Blog</title>
+	<!-- linking css to external css to style navbar and footer -->
+	<link rel="stylesheet" href="../css/header_footer.css">
+
+	<!-- start of internal css -->
+	<style type="text/css">
+		
+		/*changes font properties of h1 element and aligns text to center*/
+		h1
+		{
+			font: bold 150% Courier New;
+			text-align: center;
+		}
+
+		/*for aligning main container*/
+		section
+		{
+			margin-top: 3%;
+		}
+
+		/*doing this because curser does not change if i don't give hyper reference to a tag*/
+		a
+		{
+			cursor: pointer;
+		}
+		
+		/*changes font property of paragraph tag, list tag , table header tag , table data tag*/
+		p, li , th, td
+		{
+			font: bold 100% Courier New;
+			line-height: 1.6;
+			text-align: justify;
+		}
+
+		/*changes font property and color of anchor tag inside the span tag*/
+		span a
+		{
+			font: bold 100% Courier New;
+			text-decoration: none;
+			color: black;
+		}
+
+		/*adds border to the table */
+		table, th, td
+		{
+			border: 2px solid black;
+			border-collapse: collapse;
+			padding: 1%;
+			text-align: center;
+		}
+
+		/*Makes a div scrollble*/
+		.scrolling_div
+		{
+			overflow-x: hidden;
+            overflow-y: auto;
+            height: 400px;
+		}
+
+		/*this applies border properties to element with mini menu class
+		used in js to add link active effect*/
+		.mini_menu
+		{	
+			border-bottom: 2px solid black;
+		}
+
+		/*changes font properties of element with class of text_container*/
+		.text_container
+		{
+			font: bold 100% Courier New;
+		}
+
+
+		/*changes font properties of element with class of card_text*/
+		.card_text
+		{
+			font: bold 100% Courier New;
+		}
+
+
+		/*changes font properties of element with class of blog_detail*/
+		.blog_detail
+		{
+			font: bold 90% Courier New;
+		}
+
+		/*applies style to left card*/
+		.card_left
+		{
+ 			width: 25%;
+ 			text-align: center;
+			background-color: #F2E7E4;
+			outline: 1px dashed black;
+		}
+
+		/*applies style to right card*/
+		.card_right
+		{
+			width: 65%;
+			background-color: #F2E7E4;	
+			margin-left: 1%;
+			outline: 1px dashed black;
+		}
+
+		/*changes icon size*/
+		.icon_set_1
+		{
+			width: 20%;
+		}
+
+		/*chanegs icon size*/
+		.icon_set_2
+		{
+			width: 17%;
+		}
+
+		/*changes image size of image used in blog*/
+		.blog_image
+		{
+			width: 25%;
+			float: left;
+			margin-right: 3%;
+			outline: 3px solid black; /*Outline does not consume space like border*/
+		}
+
+	</style>
+	<!-- end of internal CSS -->
+
+</head>
+<body>
+
+	<div class= "main_container" style="display: flex; flex-direction: column;">
+
+		<!-- Navigation Bar Start -->
+		<nav style="display: flex; justify-content: space-between;"> 
+
+			<!-- Nav bar logo sectn -->
+    		<div style="display: flex;"> 
+    			<img class="logo" src="../image/Logo.png">
+			</div >
+
+			<!-- Nav bar menu section -->
+       		<div style="display: flex;">
+           		<div class="header_menu"><a href="../html/home.html">Home</a></div >
+           		<div class="header_menu"><a href="../html/cv.html">CV</a></div >
+           		<div class="header_menu"><a href="../html/blog.html" class="a_selected">Blog</a></div >
+           		<div class="header_menu"><a href="../html/research.html">Research</a></div >
+           		<div class="header_menu"><a href="../html/contact.html">Contact</a></div >
+        	</div >
+
+    	</nav>
+		<!-- Navigation Bar End -->
+
+    	<!-- Main Content Start -->
+    	<section style="display: flex;flex-direction: column;">
+    		<!-- This div wraps two cards -->
+			<div style="display: flex;justify-content: center;">
+
+				<!-- Card 1 start -->
+				<div class = "card_left">
+					<div>
+						<h1><span style="border-bottom: 1px solid black;"> &nbsp Blogs &nbsp</span></h1>
+					</div>
+
+					<!-- This div wraps blog menu -->
+					<div style="margin-top: 10%;">
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container">
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-left: -5%;">
+								<span class="card_text"><a id="blog_1_menu" class="mini_menu" onclick="show_blog_1()"> Technology in Daily Life </a></span>	
+							</div>
+						</div>
+
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-left: -5%;">
+								<span class="card_text"><a id="blog_2_menu" onclick="show_blog_2()"> What is Database </a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Card 1 End -->
+
+				<!-- Card 2 start -->
+				<div class ="card_right" style="display: flex;flex-direction: column;">
+
+					<!-- block for blog on affect of technology -->
+					<div id="blog_1">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> How has technology affected my daily life</span></h1>
+						</div>
+
+						<div style="display: flex; justify-content: flex-end; text-align: center;">
+							<div class= "icon_container" style="margin-right: -9.5%;">
+								<img class="icon_set_2" src="../Image/pencil_icon.png">
+							</div>
+
+							<div style="padding-left: 7%; padding-right: 7%; margin-right: 4%;">
+								<span class="blog_detail"> May 26, 2021 </span>
+							</div>
+						</div>
+
+						<div style="display: flex; justify-content: flex-end; text-align: center;">
+							<div class= "icon_container" style="margin-right: -8.6%;">
+								<img class="icon_set_2" src="../Image/person_icon.png">
+							</div>
+
+							<div style="padding-left: 7.2%; padding-right: 6.8%;">
+								<span class="blog_detail"> Sampanna Pokharel</span>
+							</div>
+						</div>
+
+						<div class="scrolling_div" style="padding-left: 7%; padding-right: 5%; padding-bottom: 3%; margin-top: 1%;">
+							<p>
+								<img class="blog_image" src="../image/blog1_image1.jpg">
+								I was born in early 2000s so I somewhat grew up alongside the era of technology and internet. I was first introduced to computers in my pre teens when my parents first bought a personal computer for their office work and I was absolutely fascinated by it. A small squared box which was sitting at the corner of our bedroom was packed with so many things and had so many different features, that it was probabily the first time (as far as I remember) that I was overwhelmed with joy and curiosity. When I first experienced it, I felt that it was like a new television. Are you listening to music ? don't like current song ? you can just skip it. Same with videos, you could control what you want to watch and when you want to watch it. This experience was my first proper interaction with technology. 
+							</p>
+
+							<p>
+								That small fasciniation with computers during my pre teens has led me in present time where I spend most of my time in front of a computer; surrounded by technology. I am heavily dependent on technologies, so much so that if I were to seperate myself from technology for a day, none of my tasks that I had planned for that day would progress or move forward and my day would not be productive. We as a human being have many requirements and needs, two of which are entertainment and socialization. As technology has strongly been embedded in my life, I entertain myself and socialize with people through technology. Technology has made such an impact in my life that even the decision to choose a college for my undergrad study was heavily influenced by the people I met on an online game. If I didn't have met those people, then right now I would have been walking on a completely different path.
+							</p>
+
+							<p>
+								Constantly being surrounded by technology also has its own drawbacks. I as a student feel that technology has done more harm than good in terms of my academics. Sure, I get to access information with ease and learn new topics and communicate with my teachers and friends, but I constantly feel distracted. Previously, I had better focus and could give my full undivided attention towards a specific task whether it be reading books or making notes. But now in present, I find it difficult to focus on a single task for a long period of time without getting distracted. Since the task that previously required me to move around a lot and peform different physicsal activities has now been replaced by technology (socializing), I now move a lot less and spend most of my time indoors which has had an affect on my health (both mental and physical) to some extent.
+							</p>
+
+							<p>
+								Good and bad effects of technology in my life is shown in the following table:
+								<table style="width: 90%;">
+									<tr>
+										<th> Positive </th>
+										<th> Negative </th>
+									</tr>
+
+									<tr>
+										<td> Easy communication between teachers, family members and friends </td>
+										<td> less physical interraction with others </td>
+									</tr>
+
+									<tr>
+										<td> Easy to research on a topic using Internet </td>
+										<td> little to no exposure on other means of research and getting information</td>
+									</tr>
+
+									<tr>
+										<td> Socialize with people, learn new topics, get entertainment and peform other activities from a single device  </td>
+										<td> Too much screen time has let me to having poor eyesight </td>
+									</tr>
+								</table>
+							</p>
+						</div>
+
+					</div>
+					<!-- end of blog on effect of technology -->
+
+					<!-- start of blog on database -->
+					<div id="blog_2" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> What is Database </span></h1>
+						</div>
+
+						<div style="display: flex; justify-content: flex-end; text-align: center;">
+							<div class= "icon_container" style="margin-right: -9.5%;">
+								<img class="icon_set_2" src="../Image/pencil_icon.png">
+							</div>
+
+							<div style="padding-left: 7%; padding-right: 7%; margin-right: 4%;">
+								<span class="blog_detail"> May 26, 2021 </span>
+							</div>
+						</div>
+
+						<div style="display: flex; justify-content: flex-end; text-align: center;">
+							<div class= "icon_container" style="margin-right: -8.6%;">
+								<img class="icon_set_2" src="../Image/person_icon.png">
+							</div>
+
+							<div style="padding-left: 7%; padding-right: 7%;">
+								<span class="blog_detail"> Sampanna Pokharel</span>
+							</div>
+						</div>
+
+						<div class="scrolling_div" style="padding-left: 7%; padding-right: 7%; padding-bottom: 3%; margin-top: 1%;">
+							<p>
+								<img class="blog_image" src="../image/blog2_image1.png">
+								Database is a collection of organised data and information in a computer system
+								which is used for data management <span><a href="https://searchdatamanagement.techtarget.com/definition/database" target="_blank"> <i style="color: #2d8576;"> (Hughes, 2019) </i> </a> </span>.Databases are made up of
+								several tables which represent real world entities. Tables store data in organized
+								manner in forms of rows and columns. In a table, rows represent each records and
+								column represents attributes of those records. By storing data using database, we
+								can easily access, manage, modify, update, control and organize them. Structured
+								Query language (SQL) is used to perform actions such as delete, update ,add,
+								modify and to interact with data of a database.
+							</p>
+
+							<p>
+								Before databases, people worked on spreadsheets to manage their data. The
+								downside of spreadsheet was that it did not support multi user functionality and
+								could not perform complex data manipulations. Database however could do things
+								that spreadsheet could not; it could perform complicated data manipulations,
+								provided database access to multiple users at a same time, and provided better data
+								security. <span><a href="https://www.oracle.com/database/what-is-database/" target="_blank"> <i style="color: #2d8576;"> (Oracle, 2020) </i> </a> </span>.
+							</p>
+
+							<p>
+								Databases are managed using Database Management Software (DBMS). They
+								have the following features:
+							</p>
+
+							<p> 
+								<ul style="list-style: disc;">
+									<li>Multi-User support</li>
+									<li>Maintains data integrity</li>
+									<li>Enhanced data security</li>
+									<li>Provides data backup and recovery</li>
+									<li>Prevents data redundancy</li>
+								</ul>
+
+							</p>
+						</div>
+						
+					</div>
+					<!-- end of blog on database -->
+				</div>
+				<!-- Card 2 End -->
+		</section>
+		<!-- Main Content End -->
+
+		<!-- Footer Start -->
+		<footer style="display: flex; flex-direction: column;">
+
+			<!-- This div wraps 3 icons of footer -->
+			<div class="footer_logo_wraper" style="display: flex;justify-content: center;" >
+				<div class="footer_Facebook">
+					<a href="https://www.facebook.com/sampanna.pokharel.0/" target="_blank"> <!--target="_blank"opens the link in new window-->
+						<img src="../Image/footer_fb.png">
+					</a> 
+				</div>  
+			
+				<div class="footer_Email">
+					<a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> 
+						<img src="../Image/footer_email.png">
+					</a> 
+				</div>
+			
+				<div class="footer_twitter">
+					<a href="https://twitter.com/Metalax0" target="_blank">  
+						<img src="../Image/footer_twitter.png">
+					</a> 
+				</div>
+			</div>
+
+			<div class="footer_copyright" style="margin-top: -1%;">
+				<h4> All rights reserved &nbsp &copy Sampanna Pokharel 2021 </h4>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+
+	<!-- Internal JS start-->
+	<script type="text/javascript">
+		
+		// using dom to mark element with given id
+		var blog_1_dom = document.getElementById("blog_1");
+		var blog_2_dom = document.getElementById("blog_2");
+		var blog_3_dom = document.getElementById("blog_3");
+
+		// this function removes mini_menu class from elements
+		function remove_class()
+        {
+            document.getElementById("blog_1_menu").classList.remove("mini_menu");
+            document.getElementById("blog_2_menu").classList.remove("mini_menu");
+        }
+
+		// Shows blog_1 and hides blog_2, blog_3 div when called 
+		function show_blog_1()
+		{
+			remove_class();
+			// adds class which applies css of border-bottom
+			document.getElementById("blog_1_menu").classList.add("mini_menu");
+
+			blog_1_dom.style.display= "block";
+			blog_2_dom.style.display= "none";
+			blog_3_dom.style.display= "none";
+		}
+
+		// Shows blog_2 and hides blog_1, blog_3 div when called 
+		function show_blog_2()
+		{
+			remove_class();
+			// adds class which applies css of border-bottom
+			document.getElementById("blog_2_menu").classList.add("mini_menu");
+
+			blog_1_dom.style.display= "none";
+			blog_2_dom.style.display= "block";
+			blog_3_dom.style.display= "none";
+		}
+
+	</script>
+	<!-- Internal JS end -->
+
+</body>
+</html>

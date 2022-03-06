@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="portfolio website cv">
+  	<meta name="author" content="Sampanna Pokharel">
+  	<meta name="keywords" content="portfolio, cv, blog, website">
+
+  	<!-- Title of the webpage . Title also gets displayed on browser header (tab) -->
+	<title>CV</title>
+	<!-- Linking to External Css file for header and footer -->
+	<link rel="stylesheet" href="../css/header_footer.css">
+
+	<!-- Inline css start -->
+	<style>
+
+		/*applies style to h1 tag in this html file and changes front properties and aligns text to center */
+		h1
+		{
+			font: bold 150% Courier New;
+			text-align: center;
+		}
+
+		/*aligns the main container accordingly */
+		section
+		{
+			margin-top: 1%;
+		}
+
+		/*applies style on p and li tag in this document and changes font properties*/
+		p, li
+		{
+			font: bold 100% Courier New;
+			/*outline:1px solid black;*/
+		}
+
+		/*changes font property of element with class of text_container*/
+		.text_container
+		{
+			font: bold 100% Courier New;
+		}
+
+		/*changes font property of element with class of card_text*/
+		.card_text
+		{
+			font: bold 100% Courier New;
+		}
+
+		/*changes font property of element with class of content_header*/
+		.content_header
+		{
+			font: bold 120% Courier New;
+		}
+
+		/*targets all anchor tag inside span tag and changes their font property, removes text decoration (removes underline)
+		and changes font color to black*/
+		span a
+		{
+			font: bold 100% Courier New;
+			text-decoration: none;
+			color: black;
+		}
+
+		/*Targets element with id of card_1 and applies given styles*/
+		#card_1
+		{
+			text-align: center;
+			background-color: #F2E7E4;
+			margin-bottom: 1%;
+			outline: 1px dashed black;
+		}
+
+		/*Targets element with id of card_2 and applies given styles*/
+		#card_2
+		{
+			text-align: center;
+			background-color: #F2E7E4;	
+			margin-left: 1%;	
+			margin-bottom: 1%;
+			outline: 1px dashed black;
+		}
+
+		/*Targets element with id of card_3 and applies given styles*/
+		#card_3
+		{
+			text-align: center;
+			background-color: #F2E7E4;
+			outline: 1px dashed black;
+		}
+
+		/*Targets element with id of card_4 and applies given styles*/
+		#card_4
+		{
+			background-color: #F2E7E4;	
+			margin-left: 1%;
+			outline: 1px dashed black;
+
+			/*makes div scrollable*/
+			overflow-x: hidden;
+    		overflow-y: auto;
+    		height: 420px;
+		}
+
+		/*Targets element with class of card_left and changes their width to 30% of the parent container */
+		.card_left
+		{
+ 			width: 30%;
+		}
+
+		/*Targets element with class of card_right and changes their width to 60% of the parent container */
+		.card_right
+		{
+			width: 60%;
+		}
+
+		/*Targets element with class of avatar and changes their width to 30% of the parent contaienr*/
+		/*decreasing image size (circular image)*/
+		.avatar
+		{
+			width: 30%;
+			margin-top: 1%;
+		}
+
+		/*Targets element with class of icon_set_1 and changes their width to 30% of parent container*/
+		/*reduces sizes of icon of Information category*/
+		.icon_set_1
+		{
+			width: 30%;
+		}
+
+		/*Targets element with class of icon_set_2 and changes their width to 36% of parent container*/
+		/*reduces sizes of icon of Social Media category*/
+		.icon_set_2
+		{
+			width: 36%;
+		}
+
+		/*Targets element with class of mywork_img and changes their size accordingly (image dimention) 
+		/*reduces sizes of images and makes all images the same size*/
+		.mywork_img
+		{
+			width: 300px;
+			height: 200px;
+			outline: 5px solid black;
+			margin-top: 15%;
+		}
+
+		/*Targets the elemet with class of progress_bar_outer and changes the bg color of div to black sets padding and border radius*/
+		/*The empty part of progress bar*/
+		.progress_bar_outer
+		{
+			background-color: black;
+			border-radius: 2px;
+			padding: 5px;
+		}
+
+		/*Targets the elemet with class of progress_bar_inner and changes the bg color of div to white sets margin and border radius*/
+		/*The full part of progress bar*/
+		#progress_bar_inner_Java
+		{
+			background-color: white;
+			width: 40%;
+ 			height: 10px;
+  			border-radius: 10px;
+  			margin-right: 495px;
+		}
+
+		/*progress bar specific to Front End option (text)*/
+		/*setting progress level to progress bar of Front End */
+		#progress_bar_inner_FrontEnd
+		{
+			background-color: white;
+			width: 70%;
+ 			height: 10px;
+  			border-radius: 10px;
+  			margin-right: 495px;
+		}
+
+		/*progress bar specific to Graphics option (text)*/
+		/*setting progress level to progress bar of Graphics */
+		#progress_bar_inner_Graphics
+		{
+			background-color: white;
+			width: 50%;
+ 			height: 10px;
+  			border-radius: 10px;
+  			margin-right: 495px;
+		}
+
+		/*progress bar specific to Games option (text)*/
+		/*setting progress level to progress bar of Games */
+		#progress_bar_inner_Games
+		{
+			background-color: white;
+			width: 100%;
+ 			height: 10px;
+  			border-radius: 10px;
+  			margin-right: 495px;
+		}
+
+		/*progress bar specific to Study option (text)*/
+		/*setting progress level to progress bar of Study */
+		#progress_bar_inner_Study
+		{
+			background-color: white;
+			width: 10%;
+ 			height: 10px;
+  			border-radius: 10px;
+  			margin-right: 495px;
+		}
+
+	</style>
+	<!-- Inline css end -->
+
+</head>
+<body>
+
+	<!-- 
+		Main Container Start
+		This div contains all 3 sections of page (header, content, footer) 
+	-->
+	<div class= "main_container" style="display: flex; flex-direction: column;">
+
+		<!-- Navigation Bar Start -->
+		<nav style="display: flex; justify-content: space-between;"> 
+
+			<!-- Nav bar logo sectn -->
+    		<div style="display: flex;"> 
+    			<img class="logo" src="../image/Logo.png">
+			</div >
+
+			<!-- Nav bar menu section -->
+       		<div style="display: flex;">
+           		<div class="header_menu"><a href="../html/home.html">Home</a></div >
+           		<div class="header_menu"><a href="../html/cv.html" class="a_selected">CV</a></div >
+           		<div class="header_menu"><a href="../html/blog.html">Blog</a></div >
+           		<div class="header_menu"><a href="../html/research.html">Research</a></div >
+           		<div class="header_menu"><a href="../html/contact.html">Contact</a></div >
+        	</div >
+
+    	</nav>
+		<!-- Navigation Bar End -->
+
+    	<!-- Main Content Start -->
+    	<section style="display: flex;flex-direction: column;">
+    		<!-- This div wraps two cards at the top -->
+			<div style="display: flex;justify-content: center;">
+
+				<!-- Card 1 start -->
+				<div class = "card_left" id="card_1">
+					<img class="avatar" src="../Image/avatar_noborder.png">
+				</div>
+				<!-- Card 1 end -->
+
+				<!-- Card 2 start -->
+				<div class ="card_right" id="card_2">
+					<div>
+						<h1><span style="border-bottom: 1px solid black;"> &nbsp About Me &nbsp</span></h1>
+					</div>
+
+					<!-- paragraph text for about me section -->
+					<p style="text-align:justify; padding-left: 10%; padding-right: 10%;">
+						My name is Sampanna Pokharel and I'm an undergraduate student currently persuing my bachelors degree in computing at Islington College. I read Manga, play games, and listen to music as a hobby.
+					</p>
+				</div>
+				<!-- Card 2 end -->
+			</div>
+
+			<!-- This div wraps two cards at the bottom -->
+			<div style="display: flex;justify-content: center;">
+
+				<!-- Card 3 start -->
+				<div class = "card_left" id="card_3">
+					<!-- Contains heading text -->
+					<div>
+						<h1><span style="border-bottom: 1px solid black;"> &nbsp Information &nbsp</span></h1>
+					</div>
+
+					<!-- this div wraps all the elements under Information category (logo , information) -->
+					<div style="display: flex; flex-direction: column;">
+				
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 5%; margin-bottom: 2%;">
+							<div class= "icon_container">
+								<img class="icon_set_1" src="../Image/person_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-top: 1%; margin-left: -1%;">
+								<span class="card_text"> Sampanna&nbspPokharel</span>	
+							</div>
+						</div>
+
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 6%; margin-bottom: 2%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/phone_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-top: 1%; margin-left: 0%;">
+								<span class="card_text"> +9779869277513 </span>
+							</div>
+						</div>
+
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 5%; margin-bottom: 1%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/address_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-top: 1%; margin-left: 0%;">
+								<span class="card_text"> Gaushala, Kathmandu </span>
+							</div>
+						</div>
+
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 3%;">
+							<div class= "icon_container">
+								<img class="icon_set_1" src="../Image/website_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-top: 1%; margin-left: -3%;">
+								<span class="card_text"> <a href="http://sampannapokharel.com.np/" target="_none">sampannapokharel.com.np</a> </span>
+							</div>
+						</div>
+
+					</div>
+					<!-- End of div wraping contents under Information category -->
+
+					<!-- Contains heading text -->
+					<div>
+						<h1><span style="border-bottom: 1px solid black;"> &nbsp Social Media &nbsp </span></h1>
+					</div>
+
+					<!-- this div wraps all the elements under Social Media category (logo , information) -->
+					<div style="display: flex; flex-direction: column;">
+						
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 5%; margin-bottom: 2%;">
+							<div class= "icon_container">
+								<img class="icon_set_2" src="../Image/facebook_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-top: 1%; margin-left: -1.5%;">
+								<span class="card_text"> <a href="https://www.facebook.com/sampanna.pokharel.0" target="_blank">Facebook </a></span>	
+							</div>
+						</div>
+
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 5%; margin-bottom: 2%;">
+							<div class= "icon_container" >
+								<img class="icon_set_2" src="../Image/google_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-top: 1%; margin-left: -1.5%;">
+								<span class="card_text"> <a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> Gmail </a></span>
+							</div>
+						</div>
+
+						<!-- this div wraps a single text and logo -->
+						<div style="display: flex; margin-left: 5%; margin-bottom: 1%;">
+							<div class= "icon_container" >
+								<img class="icon_set_2" src="../Image/twitter_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-top: 1%; margin-left: -1.5%;">
+								<span class="card_text"> <a href="https://twitter.com/Metalax0" target="_blank"> Twitter </a></span>
+							</div>
+						</div>
+
+					</div>
+					<!-- End of div wraping contents under Social Media category -->
+
+				</div>
+				<!-- Card 3 End -->
+
+				<!-- Card 4 start -->
+				<div class ="card_right" id="card_4" style="display: flex;flex-direction: column;">
+					<!-- Contains heading text -->
+					<div>
+					<h1><span style="border-bottom: 1px solid black;"> &nbsp Academics &nbsp</span></h1>
+					</div>
+
+					<!-- this div wraps all the elements under Academics category (logo , information) -->
+					<div style="padding-right: 8%;margin-top: -3%;">
+						<!-- Unordered list to display academic history -->
+						<ul style="list-style: square; margin-left: 7%;">
+							<li>
+								<!-- Contains sub heading text -->
+								<span class="content_header">SLC,2015</span>
+								<ul style="list-style: none;">
+									<li> 
+										I completed my middle school (10<sup>th</sup> grade) from GEMS with a GPA of 3.40
+									</li>
+								</ul>
+							</li>
+							<br>
+							<li>
+								<!-- Contains sub heading text -->
+								<span class="content_header">A-Levels,2018</span>
+								<ul style="list-style: none;">
+									<li> 
+										I completed my A-Levels from Trinity International College with a major in Computer Science. Did not include my GPA here for a reason :(
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+	
+					<!-- Contains heading text -->
+					<div>
+					<h1 style="text-align: center; margin-top: 0%"><span style="border-bottom: 1px solid black;"> &nbsp Skills &nbsp</span></h1>
+					</div>
+
+					<!-- Progress Bar div start-->
+					<div style="display: flex; flex-direction: column;">
+			
+						<!-- Java Progress bar -->
+						<div style="display: flex; margin-left : 10%;">
+							<div class= "icon_container">
+								<span class="card_text">Programming in Java</span>
+							</div>
+
+							<div class="progress_bar_outer" style="margin-left : 5%; margin-bottom: 1.5%">
+								<div id="progress_bar_inner_Java"></div>
+							</div>
+						</div>
+
+						<!-- FrontEnd Progress bar -->
+						<div style="display: flex; margin-left : 10%;">
+							<div class= "icon_container" >
+								<span class="card_text">Front-End development</span>
+							</div>
+
+							<div class="progress_bar_outer" style="margin-left : 2.7%; margin-bottom: 1.5%">
+								<div class="progress_bar_inner" id="progress_bar_inner_FrontEnd"></div>
+							</div>
+						</div>
+
+						<!-- Graphics Design Progress bar -->
+						<div style="display: flex; margin-left : 10%;">
+							<div class= "icon_container">
+								<span class="card_text">Graphics Designing</span>
+							</div>
+
+							<div class="progress_bar_outer" style="margin-left : 6.3%; margin-bottom: 1.5%">
+								<div class="progress_bar_inner" id="progress_bar_inner_Graphics"></div>
+							</div>
+						</div>
+
+						<!-- Games Progress bar -->
+						<div style="display: flex; margin-left : 10%;">
+							<div class= "icon_container">
+								<span class="card_text">Playing games for 5hr</span>
+							</div>
+
+							<div class="progress_bar_outer" style="margin-left : 2.8%; margin-bottom: 1.5%">
+								<div class="progress_bar_inner" id="progress_bar_inner_Games"></div>
+							</div>
+						</div>
+
+						<!-- Studies  Design Progress bar -->
+						<div class="progress_studying"style="display: flex; margin-left : 10%;">
+							<div class= "icon_container">
+								<span class="card_text">Studying for 1hr</span>
+							</div>
+
+							<div class="progress_bar_outer" style="margin-left : 8.6%; margin-bottom: 3%">
+								<div class="progress_bar_inner" id="progress_bar_inner_Study"></div>
+							</div>
+						</div>
+
+					</div>	
+					<!-- Progress Bar div end -->
+
+					<!-- Contains heading text -->
+					<div>
+					<h1><span style="border-bottom: 1px solid black;"> &nbsp My Work &nbsp</span></h1>
+					</div>
+
+					<!-- wraps all the images under my work category -->
+					<div style="display:flex; justify-content: space-around; flex-flow: row wrap;  ">
+
+						<div>
+							<img class="mywork_img" src="../Image/butterfly_img.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/cicada_img.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/dog_img.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/dog_img2.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/cat_img.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/cat_img2.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/lion_img.jpg">
+						</div>
+
+						<div>
+							<img class="mywork_img" src="../Image/lion_img2.jpg">
+						</div>
+
+					</div>
+					<!-- End of div wraping all images of my work category -->
+
+				</div>
+				<!-- Card 4 End -->
+			</div>
+		</section>
+		<!-- Main Content End -->
+
+		<!-- Footer Start -->
+		<footer style="display: flex; flex-direction: column;">
+
+			<!-- This div wraps 3 icons of footer -->
+			<div class="footer_logo_wraper" style="display: flex;justify-content: center;" >
+				<!-- div wraping facebook icon -->
+				<div class="footer_Facebook">
+					<a href="https://www.facebook.com/sampanna.pokharel.0/" target="_blank"> <!--target="_blank"opens the link in new window-->
+						<img src="../Image/footer_fb.png">
+					</a> 
+				</div>  
+			
+				<!-- div wraping email icon -->
+				<div class="footer_Email">
+					<a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> 
+						<img src="../Image/footer_email.png">
+					</a> 
+				</div>
+			
+				<!-- div wraping twitter icon -->
+				<div class="footer_twitter">
+					<a href="https://twitter.com/Metalax0" target="_blank">  
+						<img src="../Image/footer_twitter.png">
+					</a> 
+				</div>
+			</div>
+
+			<!-- div wraping footer text -->
+			<div class="footer_copyright" style="margin-top: -1%;">
+				<h4> All rights reserved &nbsp &copy Sampanna Pokharel 2021 </h4>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+ 
+</body>
+</html>

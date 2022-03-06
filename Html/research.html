@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="website frontend development research and reference">
+  	<meta name="author" content="Sampanna Pokharel">
+  	<meta name="keywords" content="website research, website reference">
+
+	<title>Research</title>
+	<!-- linking external css file for header and footer -->
+	<link rel="stylesheet" href="../css/header_footer.css">
+
+	<!-- start of Internal css -->
+	<style type="text/css">
+		
+		/*changes font property and aligns text of h1 element*/
+		h1
+		{
+			font: bold 150% Courier New;
+			text-align: center;
+		}
+
+		/*aligns main container of the page */
+		section
+		{
+			margin-top: 2%;
+		}
+
+		/*doing this because curser does not change if i don't give hyper reference to a tag*/
+		a
+		{
+			cursor: pointer;
+		}
+
+		/*this applies border properties to element with mini menu class
+		used in js to add link active effect*/
+		.mini_menu
+		{	
+			border-bottom: 2px solid black;
+		}
+
+		/*applies font style to paragraph */
+		p
+		{
+			font: bold 110% Courier New;
+  			line-height: 1.6;
+  			text-align: justify;
+		}
+
+		/*sapplies font style to class with text_container*/
+		.text_container
+		{
+			font: bold 100% Courier New;
+		}
+
+		/*sapplies font style to class with card_text*/
+		.card_text
+		{
+			font: bold 100% Courier New;
+
+		}
+
+		/*sapplies font style to class with blog_detail*/
+		.blog_detail
+		{
+			font: bold 90% Courier New;
+		}
+
+		/*sapplies font style to anchor tag that is inside span tag which is inside paragraph tag and 
+		style to anchor tag that is inside span tag*/
+		p span a, span a
+		{
+			font: bold 100% Courier New;
+			text-decoration: none;
+			color: black;
+		}
+
+		/*provides style to left card (div) */
+		.card_left
+		{
+ 			width: 25%;
+ 			text-align: center;
+			background-color: #F2E7E4;
+			outline: 1px dashed black;
+		}
+
+		/*provides style to right card (div) */
+		.card_right
+		{
+			width: 65%;
+			background-color: #F2E7E4;	
+			margin-left: 1%;
+			outline: 1px dashed black;
+		}
+
+		/*Makes a div scrollble*/
+		.scrolling_div
+		{
+			overflow-x: hidden;
+    		overflow-y: auto;
+    		height: 570px;
+		}
+
+		/*changes icon size */
+		.icon_set_1
+		{
+			width: 20%;
+		}
+
+		/*changes icon size */
+		.icon_set_2
+		{
+			width: 17%;
+		}
+
+		/*changes image and gif size and adds outline(just like border) */
+		.img_and_gif
+		{
+			outline: 2px solid black;
+			width: 90%;
+		}
+
+	</style>
+	<!-- end of internal css -->
+
+</head>
+<body>
+
+	<!-- this is main container. it wraps all elements (except header and footer) -->
+	<div class= "main_container" style="display: flex; flex-direction: column;">
+
+		<!-- Navigation Bar Start -->
+		<nav style="display: flex; justify-content: space-between;"> 
+
+			<!-- Nav bar logo section -->
+    		<div style="display: flex;"> 
+    			<img class="logo" src="../Image/Logo.png">
+			</div >
+
+			<!-- Nav bar menu section -->
+       		<div style="display: flex;">
+           		<div class="header_menu"><a href="home.html">Home</a></div >
+           		<div class="header_menu"><a href="cv.html">CV</a></div >
+           		<div class="header_menu"><a href="blog.html">Blog</a></div >
+           		<div class="header_menu"><a href="research.html" class="a_selected">Research</a></div >
+           		<div class="header_menu"><a href="contact.html">Contact</a></div >
+        	</div >
+    	</nav>
+    	<!-- Navigation Bar End -->
+
+    	<!-- Main Content Start -->
+    	<section style="display: flex;flex-direction: column;">
+    		<!-- This div wraps two cards -->
+			<div style="display: flex;justify-content: center;">
+
+				<!-- Card 1 start -->
+				<div class = "card_left">
+					<div>
+						<h1><span style="border-bottom: 1px solid black;"> &nbspResearch & References&nbsp</span></h1>
+					</div>
+
+					<!-- This div wraps research menu -->
+					<div style="margin-top: 10%;">
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container">
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-left: -5%;">
+								<span class="card_text"><a class="mini_menu" id="general_menu_item" onclick="show_general()"> General </a></span>	
+							</div>
+						</div>
+
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container">
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class= "text_container" style="margin-left: -5%;">
+								<span class="card_text"><a id="home_menu_item" onclick="show_home_reference()"> Home reference</a></span>	
+							</div>
+						</div>
+
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-left: -5%;">
+								<span class="card_text"><a id="cv_menu_item" onclick="show_cv_reference()"> CV reference</a></span>
+							</div>
+						</div>
+
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-left: -5%;">
+								<span class="card_text"> <a id="blog_and_reference_menu_item" onclick="show_blog_and_research_reference()"> Blog & Research reference</a> </span>
+							</div>
+						</div>
+					
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-left: -5%;">
+								<span class="card_text"> <a id="contact_menu_item" onclick="show_contact_reference()"> Contact reference</a> </span>
+							</div>
+						</div>
+
+						<!-- icon and menu text on left card-->
+						<div style="display: flex; margin-bottom: 5%;">
+							<div class= "icon_container" >
+								<img class="icon_set_1" src="../Image/book_icon.png">
+							</div>
+
+							<div class="text_container" style="margin-left: -5%;">
+								<span class="card_text"> <a id="navigation_menu_item" onclick="show_navigation_and_footer_reference()"> Navbar & footer reference </a> </span>
+							</div>
+						</div>
+					</div>
+					<!-- end of div wraping menu items on left card -->
+
+				</div>
+				<!-- Card 1 End -->
+
+				<!-- Card 2 start -->
+				<div class ="card_right" style="display: flex;flex-direction: column;">
+
+					<!-- Research content for general page end -->
+					<div id="general">
+						<!-- content header -->
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> General </span></h1>
+						</div>
+
+						<!-- this div wraps content / text written for general  -->
+						<div style="padding-left: 7%; padding-right: 7%; padding-bottom: 5%;">
+							<p>
+								<br>
+								During this project I had to take references from other website and webpages. While taking references, i only implemented the design and layout of that page into mine. Throught the project (entire website), I did not copy a single line from source code of other sites. However there were some instances where I had to look up tags, their attributes and how they work from other site (mostly 
+								<span><a href="https://www.w3schools.com/" target="_blank"> <i style="color: #2d8576;"> w3Schools </i> </a> </span>). 
+							</p>
+
+							<p>
+								With the help of w3schools I implemented text animation in my home page. I also learned a little bit about how to use flex and its property which was a major help in this project as i've used that to provide structure to the pages. For my contact page which has a form, I had to use javascript for validation and I went to w3Schools to learn about js syntax (mostly how DOM works). I also implemented the progress-bar in cv page from w3 schools.
+							</p>
+
+							<p>
+								<- Click the menu on the left to see references used for Inidividual page.
+							</p>
+						</div>
+						<!-- end of div wraping content for general -->
+					</div>
+					<!-- Research content for general page end -->
+
+					<!-- Research content for home page start -->
+					<div id="home_page" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> Home Page </span></h1>
+						</div>
+
+						<!-- This div contains two images -->
+						<div style="display: flex; text-align: center;">
+							<div>
+								<img class="img_and_gif" src="../Image/home_reference_gif_1.gif">
+							</div>		
+							<div>
+								<img class="img_and_gif" src="../Image/home_reference_gif_2.gif">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 3%;">
+							<p>
+								<br>
+								I took Sean O' Connor's site as showcased at 
+								<span><a href="https://collegeinfogeek.com/personal-website-examples/#website-copy-examples" target="_blank"> <i style="color: #2d8576;"> college in for geek's</i></a> article about portfolio websites</span>. 
+								as a reference for my home page and implemented the layout and design 
+								to my own. Image and text placement on both of our Home pages are similar. The navigation bar and footer 
+								section were however referenced from another source which is explained in 
+								<span><a onclick="show_navigation_and_footer_reference()"> <i style="color: #2d8576;"> Navigation & Footer </i></a> </span>.
+							</p>
+						</div>
+					</div>
+					<!-- Research content for home page end -->
+
+					<!-- Research content for cv page start -->
+					<div id="cv_page" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> CV Page </span></h1>
+						</div>
+
+						<!-- This div contains two  images -->
+						<div style="display: flex; text-align: center;">		
+							<div>
+								<img class="img_and_gif" src="../Image/cv_reference.png">
+							</div>
+							<div>
+								<img class="img_and_gif" src="../Image/cv_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 2%;">
+							<p>
+								<br>
+								I Found this image of CV Template on google while searching for "designs for CV". This layout originally belongs to
+								<span><a href="https://www.mycvtemplates.com/product/professional-cv-templates-curriculum-vitae-word-resume-templates-cover-letter-and-references-templates-creative-cv-templates-modern-cv-templates-for-digital-instant-download-mycvtemplate-05/" target="_blank"> <i style="color: #2d8576;"> www.mycvtemplates.com </i></a> </span>.
+								I implemented the basics overally layout of this image into my cv page but the contents inside of cv are not similar to reference image but are heavily modified and changed. 
+							</p>
+						</div>
+					</div>
+					<!-- Research content for cv page end -->
+
+					<!-- Research content for blog and research page start -->
+					<div id="blog_and_research_page" class="scrolling_div" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> Blog and Research Page </span></h1>
+						</div>
+
+						<!-- this div wraps two images -->
+						<div style="display: flex; text-align: center;">		
+							<div>
+								<img class="img_and_gif" src="../Image/blog_reference.png">
+							</div>
+							<div>
+								<img class="img_and_gif" src="../Image/blog_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 2%;">
+							<p>
+								I came across this blog site while researching for a simplistic and minimalistic design. I took reference for my blog page from
+								<span><a href="http://www.athomewithnatalie.com/" target="_blank"> <i style="color: #2d8576;"> at home with natalie</i></a>.</span>
+								I took the image, date, title and content part from the reference site and used it as a design for my site. Initially I wanted an image on the left and blog content on the right being arranged side to side (card) but, while implementing it during coding phase, I accidentally generated the current layout (I kept image inside of paragraph tag instead of making a seperate div for it). After accidentally generating something else, I decided to stick with it.
+							</p>
+						</div>
+
+						<!-- this div wraps two images -->
+						<div style="display: flex; text-align: center;">		
+							<div>
+								<img class="img_and_gif" src="../Image/research_reference.png">
+							</div>
+							<div>
+								<img class="img_and_gif" src="../Image/research_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 2%;">
+							<p>
+								For the navigation card on the left of blog and research page, I took reference from 
+								<span><a href="https://www.w3schools.com/html/default.asp" target="_blank"> <i style="color: #2d8576;">w3schools</i></a></span>
+								which has a inside-page navigation on its left side. I recycled the code from the cv page (of my site) into a two card layout- left card for within-page navigation and right card for content (of blog and research). The difference in the reference(image) and my research page is that i have a certain gap between left card and right card and have added a logo to menu items.
+							</p>
+						</div>
+
+					</div>
+					<!-- Research content for blog and research page end -->
+
+					<!-- Research content for Contact page start-->
+					<div id="contact_page" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> Contact Page </span></h1>
+						</div>
+
+						<!-- This div contains two  images -->
+						<div style="display: flex; text-align: center;" >
+							<div>
+								<img class="img_and_gif" src="../Image/contact_reference.png">
+							</div>		
+							<div>
+								<img class="img_and_gif" src="../Image/contact_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 1%;">
+							<p>
+								<br>
+								The design, layout of my contact page was heavily influenced by the design posted in
+								<span><a href="https://uicookies.com/css-contact-form/" target="_blank"> <i style="color: #2d8576;">UI cookies </i> </a> </span> website. To make my contact page as close to the reference, I had to take help of w3 schools. From w3 schools, I looked up how to style textbox, buttons and edit placeholders (I did not know pseudo elements existed) and designed accordingly. Apart from the color theme and font, my contact page looks similar to the reference.
+							</p>
+						</div>
+					</div>
+					<!-- Research content for contact page end -->
+
+					<!-- Research content for nav bar and footer start -->
+					<div id="navigation_and_footer_page" style="display: none;">
+						<div>
+						<h1><span style="border-bottom: 1px solid black;"> Navigation & Footer </span></h1>
+						</div>
+
+						<!-- this div wraps two images -->
+						<div style="display: flex; text-align: center;">
+							<div>
+								<img class="img_and_gif" src="../Image/nav_reference.png">
+							</div>		
+							<div>
+								<img class="img_and_gif" src="../Image/nav_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 2%; margin-top: -2%;">
+							<p>
+								<br>
+								The design and Layout of my navigation bar was heavily influenced by the design of Vikalp Kaushik which was posted on 
+								<span><a href="https://uxplanet.org/my-portfolio-website-helps-me-to-get-a-full-stack-internship-32c2f70d8a8f" target="_blank"> <i style="color: #2d8576;">Ux planet's website </i> </a> </span>.
+								Just like the reference, I went with minimalistic navbar with simple font and transparent background. However, unlike the reference, I did not use and image avatar on my navbar but instead replaced that with an image logo which I made using Adobe Illustrator.
+							</p>
+						</div>
+
+						<!-- this div wraps two images -->
+						<div style="display: flex; text-align: center;">
+							<div>
+								<img class="img_and_gif" src="../Image/footer_reference.png">
+							</div>		
+							<div>
+								<img class="img_and_gif" src="../Image/footer_reference2.png">
+							</div>
+						</div>
+
+						<!-- this div contains paragraph explaining reference -->
+						<div style="padding-left: 3%; padding-right: 3%; padding-bottom: 0%; margin-top: -2%;">
+							<p>
+								<br>
+								The design and Layout of my footer was influenced by the footer of 
+								<span><a href="https://random-ize.com/" target="_blank"> <i style="color: #2d8576;">Random-ize</i></a></span>
+								website. Instead of Youtube, Twitter and Facebook icons in their footer, I used Facebook, Gmail and Twitter 
+								icons. The text and icons in the reference footer is on the same line but on my site, I placed logo and text on seperate lines (seperate div). The buttons on referenced footer icons and my footer icons serve the same purpose and have similar workings , they both open respective links in new tab.
+							</p>
+					</div>
+					<!-- Research content for nav bar and footer end -->
+
+				</div>
+				<!-- Card 2 End -->
+		</section>
+		<!-- Main Content End -->
+
+		<!-- Footer Start -->
+		<footer style="display: flex; flex-direction: column;">
+
+			<!-- This div wraps 3 icons of footer -->
+			<div class="footer_logo_wraper" style="display: flex;justify-content: center;" >
+				<!-- image icon of facebook -->
+				<div class="footer_Facebook">
+					<a href="https://www.facebook.com/sampanna.pokharel.0/" target="_blank"> <!--target="_blank"opens the link in new window-->
+						<img src="../Image/footer_fb.png">
+					</a> 
+				</div>  
+			
+				<!-- image icon of email -->
+				<div class="footer_Email">
+					<a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> 
+						<img src="../Image/footer_email.png">
+					</a> 
+				</div>
+			
+				<!-- image icon of twitter -->
+				<div class="footer_twitter">
+					<a href="https://twitter.com/Metalax0" target="_blank">  
+						<img src="../Image/footer_twitter.png">
+					</a> 
+				</div>
+			</div>
+
+			<div class="footer_copyright" style="margin-top: -1%;">
+				<h4> All rights reserved &nbsp &copy Sampanna Pokharel 2021 </h4>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+
+	<!-- Internal JS start-->
+	<script type="text/javascript">
+
+		// locate element with specific id
+		var general_dom= document.getElementById("general");
+		var home_reference_dom = document.getElementById("home_page");
+		var cv_reference_dom = document.getElementById("cv_page");
+		var blog_and_research_reference_dom = document.getElementById("blog_and_research_page");
+		var contact_reference_dom = document.getElementById("contact_page");
+		var navigation_and_footer_dom = document.getElementById("navigation_and_footer_page");
+
+		// removes mini_menu class which also removes the border-bottom style 
+		function remove_class()
+        {
+            document.getElementById("general_menu_item").classList.remove("mini_menu");
+            document.getElementById("home_menu_item").classList.remove("mini_menu");
+            document.getElementById("cv_menu_item").classList.remove("mini_menu");
+            document.getElementById("blog_and_reference_menu_item").classList.remove("mini_menu");
+            document.getElementById("contact_menu_item").classList.remove("mini_menu");
+            document.getElementById("navigation_menu_item").classList.remove("mini_menu"); 
+        }
+
+		// Shows readme section and hides others when called 
+		function show_general()
+		{
+			remove_class();
+			document.getElementById("general_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "block";
+			home_reference_dom.style.display= "none";
+			cv_reference_dom.style.display= "none";
+			blog_and_research_reference_dom.style.display = "none";
+			contact_reference_dom.style.display= "none";
+			navigation_and_footer_dom.style.display ="none";
+		}
+
+		// Shows home reference  section and hides others when called  
+		function show_home_reference()
+		{
+			remove_class();
+			document.getElementById("home_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "none";
+			home_reference_dom.style.display= "block";
+			cv_reference_dom.style.display= "none";
+			blog_and_research_reference_dom.style.display = "none";
+			contact_reference_dom.style.display= "none";
+			navigation_and_footer_dom.style.display ="none";
+		}
+
+		// Shows cv reference section and hides others when called 
+		function show_cv_reference()
+		{
+			remove_class();
+			document.getElementById("cv_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "none";
+			home_reference_dom.style.display= "none";
+			cv_reference_dom.style.display= "block";
+			blog_and_research_reference_dom.style.display = "none";
+			contact_reference_dom.style.display= "none";
+			navigation_and_footer_dom.style.display ="none";
+		}
+
+		// Shows blog reference section and hides others when called   
+		function show_blog_and_research_reference()
+		{
+			remove_class();
+			document.getElementById("blog_and_reference_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "none";
+			home_reference_dom.style.display= "none";
+			cv_reference_dom.style.display= "none";
+			blog_and_research_reference_dom.style.display = "block";
+			contact_reference_dom.style.display= "none";
+			navigation_and_footer_dom.style.display ="none";
+		}
+
+		// Shows navbar reference section and hides others when called  
+		function show_contact_reference()
+		{
+			remove_class();
+			document.getElementById("contact_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "none";
+			home_reference_dom.style.display= "none";
+			cv_reference_dom.style.display= "none";
+			blog_and_research_reference_dom.style.display = "none";
+			contact_reference_dom.style.display= "block";
+			navigation_and_footer_dom.style.display ="none";
+		}
+
+		// Shows navbar reference section and hides others when called  
+		function show_navigation_and_footer_reference()
+		{
+			remove_class();
+			document.getElementById("navigation_menu_item").classList.add("mini_menu");
+
+			general_dom.style.display= "none";
+			home_reference_dom.style.display= "none";
+			cv_reference_dom.style.display= "none";
+			blog_and_research_reference_dom.style.display = "none";
+			contact_reference_dom.style.display= "none";
+			navigation_and_footer_dom.style.display ="block";
+		}
+
+
+	</script>
+	<!-- Internal JS end -->
+
+</body>
+</html>
+
+
+<!-- NOTE MAKE CARD SWIPE FOR RESEARCH PAGE. -->

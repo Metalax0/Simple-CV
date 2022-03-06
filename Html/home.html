@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="portfolio website home page">
+  	<meta name="author" content="Sampanna Pokharel">
+  	<meta name="keywords" content="portfolio, cv, blog, website">
+
+  	<!-- Title of the webpage . Title also gets displayed on browser header (tab) -->
+	<title>Sampanna Pokharel</title>
+	<!-- Linking to External Css file for header and footer -->
+	<link rel="stylesheet" href="../css/header_footer.css"> 
+
+	<!-- Inline Css Start -->
+	<style>
+
+		/*applies style to semantic element section accordingly (positions main content of the page accordingly)*/
+		section
+		{
+			text-align: center;
+			margin-top: 4%;
+			margin-bottom: 2%;
+		}
+
+		/*reduces icon size (image) of the three icons in lower part of home page*/
+		.semi_footer div a img
+		{
+			width: 50%;
+		}
+
+		/*align those three icons the the middle part of lower home page*/
+		.semi_footer
+		{
+			margin-left: 44%;
+			margin-right: 42%;
+		}
+
+		/*reduces image size of the potrait image (circular image at the middle of the scren)*/
+		.avatar
+		{
+			width: 25%;
+		}
+
+		/*gives style to the font property of h1 tag*/
+		h1
+		{
+			font: bold 350% Courier New;
+		}
+
+		/*gives style to the font property of h2 tag*/
+		h2
+		{
+			font: bold 250% Courier New;
+		}
+
+		/*gives style to span element within h2 element */
+		h2 span::before
+		{
+			color: red;
+			content: 'Student';
+			font: bold 90% Lucida Handwriting;
+			animation : text_animation infinite 5s;
+		}
+
+		/*defining a animation along with its timestamps (progress %)*/
+		@keyframes text_animation
+		{
+			/*
+			at 40% progress of animation, changes font and replaces the text from Student to Designer. 
+			Also applies other styles (font property) accordingly
+			*/
+			40%
+			{
+				font: bold 90% Lucida Handwriting;
+				color: orange;
+				content: 'Designer';
+			}
+
+			/*
+			at 70% progress of animation, changes font and replaces the text from Designer to Developer. 
+			Also applies other styles (font property) accordingly
+			*/
+			70%
+			{
+				font: bold 90% Lucida Handwriting;
+				content: 'Developer';
+				color: green;
+			}
+
+			/*
+			at 100% progress of animation, changes font and replaces the text from Developer to Dreamer. 
+			Also applies other styles (font property) accordingly
+			*/
+			100%
+			{
+				font: bold 90% Lucida Handwriting;
+				content: 'Dreamer';
+				color: lime
+			}
+
+	</style>
+	<!-- Inline Css End -->
+
+</head>
+<body>
+
+	<!-- 
+	Main Container Start
+	This div contains all 3 sections of page (header, content, footer) 
+	-->
+	<div class= "main_container" style="display: flex; flex-direction: column;">
+
+		<!-- Navigation Bar Start -->
+		<nav style="display: flex; justify-content: space-between;"> 
+
+			<!-- Nav bar logo section -->
+    		<div style="display: flex;"> 
+    			<img class="logo" src="../image/Logo.png">
+			</div >
+
+			<!-- Nav bar menu section -->
+       		<div style="display: flex;">
+           		<div class="header_menu"><a href="../html/home.html" class="a_selected">Home</a></div >
+           		<div class="header_menu"><a href="../html/cv.html">CV</a></div >
+           		<div class="header_menu"><a href="../html/blog.html">Blog</a></div >
+           		<div class="header_menu"><a href="../html/research.html">Research</a></div >
+           		<div class="header_menu"><a href="../html/contact.html">Contact</a></div >
+        	</div >
+
+    	</nav>
+		<!-- Navigation Bar End -->
+
+		<!-- Main Content  Start -->
+		<div style="display: flex; justify-content: center;">
+			<section>
+				<img class="avatar" src="../Image/avatar_1.png">
+				<h1> Hi, I'm Sampanna Pokharel</h1>
+				<h2>A <span></span> </h2>
+			</section>
+		</div>
+		<!-- Main Content End -->
+
+		<!-- Footer Start (partially a footer)-->
+		<div class = "semi_footer" style="display: flex;">
+			<!-- this div wraps the logo of facebook in our footer -->
+			<div>
+				<a href="https://www.facebook.com/sampanna.pokharel.0/" target="_blank"> <!--target="_blank"opens the link in new window-->
+					<img src="../Image/footer_fb.png">
+				</a> 
+			</div>  
+			
+			<!-- this div wraps the logo of Email in our footer -->
+			<div>
+				<a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> 
+					<img src="../Image/footer_email.png">
+				</a> 
+			</div>
+			
+			<!-- this div wraps the logo of twitter in our footer -->
+			<div>
+				<a href="https://twitter.com/Metalax0" target="_blank">  
+					<img src="../Image/footer_twitter.png">
+				</a> 
+			</div>
+		</div>
+		<!-- Footer End -->
+	</div>
+	<!-- End of main container -->
+
+</body>
+</html>

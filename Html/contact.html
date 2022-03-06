@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Contact section of the website">
+  	<meta name="author" content="Sampanna Pokharel">
+  	<meta name="keywords" content="contact us, contact us webpage, contact us form">
+
+	<title>Contact</title>
+	<!-- links external css for navigation bar and footer -->
+	<link rel="stylesheet" href="../css/header_footer.css">
+	<script src="../js/form_validation.js"></script>
+
+	<!-- Internal css start -->
+	<style type="text/css">
+
+		/*arranges main container to center by giving margin and applies padding affect*/
+		/*also creates a border around it */
+		section
+		{
+			border: 5px solid black;
+			background-color: #F2E7E4;
+
+			margin-top: 3%;
+			margin-left: 25%;
+			margin-right: 25%;
+
+			padding-left: 10%;
+			padding-right: 10%;
+			padding-bottom: 5%;
+		}
+
+		/*applies font property on h1 element*/
+		h1
+		{
+			font: bold 300% Courier New;
+			text-align: center;
+			margin-bottom: 5%;
+		}
+
+		/*applies font property on h2 element*/
+		h2
+		{
+			font: bold 120% Courier New;
+			text-align: center;
+			margin-bottom: 5%;
+			text-align: center;
+		}
+
+		/*adds padding to element with class form_input*/
+		.form_input
+		{
+			padding-bottom: 5%;
+		}
+
+		/*applies style to .form_input classes' input (stype input which is inside .form_input)*/
+		.form_input > input
+		{
+			padding-top: 4%;
+
+			width: 100%;
+			font: bold 120% Courier New; 
+
+			border: none;
+			outline: 0px; /*setting outline to 0px because outline appears when clicking in textbox (focus)*/
+			border-bottom: 3px solid black;
+			background-color: transparent;
+		}
+
+		/*Applies style to placeholder of input (inside form)*/
+		::placeholder
+		{
+			font: bold 130% Courier New;
+		}
+
+		/*adds style to submit button*/
+		/*changes color ,resets border , removes background color*/
+		#submit_button
+		{
+			background-color: transparent;
+  			border: none;
+  			padding-top: 2%;
+  			padding-bottom :2%;
+  			padding-left: 3%;
+  			padding-right: 3%;
+  			text-align: center;
+  			font: bold 120% Courier New;
+  			border: 3px solid black;
+		}
+
+		/*adds style to submit botton when hovered by mouse
+		changes text color, adds a rounded border instead of rectangle*/
+		#submit_button:hover
+		{
+			cursor: pointer;
+			color: green;
+			border: none;
+			border: 3px solid black;
+			border-radius: 20px 20px 20px 20px;
+		}
+
+	</style>
+	<!-- end of internal css -->
+
+</head>
+<body>
+
+	<!-- this div wraps all content of the screen -->
+	<div class= "main_container" style="display: flex; flex-direction: column;">
+
+		<!-- Navigation Bar Start -->
+		<nav style="display: flex; justify-content: space-between;"> 
+
+			<!-- Nav bar logo sectn -->
+    		<div style="display: flex;"> 
+    			<img class="logo" src="../image/Logo.png">
+			</div >
+
+			<!-- Nav bar menu section -->
+       		<div style="display: flex;">
+           		<div class="header_menu"><a href="../html/home.html">Home</a></div >
+           		<div class="header_menu"><a href="../html/cv.html">CV</a></div >
+           		<div class="header_menu"><a href="../html/blog.html">Blog</a></div >
+           		<div class="header_menu"><a href="../html/research.html">Research</a></div >
+           		<div class="header_menu"><a href="../html/contact.html" class="a_selected">Contact</a></div >
+        	</div >
+
+    	</nav>
+		<!-- Navigation Bar End -->
+
+    	<!-- Main Content Start -->
+    	<section>
+    		<!-- div contains heading text -->
+    		<div>
+    			<h1>CONTACT US</h1>
+    		</div>
+
+    		<!-- div cotnains sub heading text -->
+    		<div>
+    			<h2>Fill in the form below and submit to send us a message.</h2>
+    		</div>
+
+    		<!-- Form Container -->
+			<div>			
+				<form onsubmit="validate_form()" style="display: flex; flex-direction: column;">
+					<!-- Wraps 3 text box -->
+					<div>
+						<!-- text box for full name -->
+						<div class="form_input">
+							<input id="fname" type="text" name="Full_Name" placeholder="Enter Your Name">
+						</div>
+
+						<!-- text box for email -->
+						<div class="form_input">
+							<input id="email" type="text" name="Email" placeholder="Enter Your Email">
+						</div>
+
+						<!-- text box for message -->
+						<div class="form_input">
+							<input id="msg" type="text" name="Message" placeholder="Enter Your Message">
+						</div>
+					</div>
+
+					<!-- submit button -->
+					<div class="button_container" style="text-align: center; margin-top: 5%;">
+						<input id = "submit_button" type="submit">
+					</div>
+				</form>
+
+			</div>
+			<!-- end of form container -->
+				
+		</section>
+		<!-- Main Content End -->
+
+		<!-- Footer Start -->
+		<footer style="display: flex; flex-direction: column;">
+
+			<!-- This div wraps 3 icons of footer -->
+			<div class="footer_logo_wraper" style="display: flex;justify-content: center;" >
+				<!-- div contains facebook logo -->
+				<div class="footer_Facebook">
+					<a href="https://www.facebook.com/sampanna.pokharel.0/" target="_blank"> <!--target="_blank"opens the link in new window-->
+						<img src="../Image/footer_fb.png">
+					</a> 
+				</div>  
+			
+				<!-- div contains email logo -->
+				<div class="footer_Email">
+					<a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMVJTQHFvGScpCPMQBSNXXzbvgjqfVhJFlmBKjmpmldBjsxSwSRDNmPqXjTdHPTWDjnLchT" target="_blank"> 
+						<img src="../Image/footer_email.png">
+					</a> 
+				</div>
+			
+				<!-- div contains twitter logo -->
+				<div class="footer_twitter">
+					<a href="https://twitter.com/Metalax0" target="_blank">  
+						<img src="../Image/footer_twitter.png">
+					</a> 
+				</div>
+			</div>
+
+			<!-- div contains text under 3 logo -->
+			<div class="footer_copyright" style="margin-top: -1%;">
+				<h4> All rights reserved &nbsp &copy Sampanna Pokharel 2021 </h4>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+
+</body>
+</html>
